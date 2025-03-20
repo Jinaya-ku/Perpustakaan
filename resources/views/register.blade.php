@@ -12,25 +12,23 @@
             <div class="bg-gradient-to-r from-purple-400 to-blue-500 text-white text-center rounded-t-lg py-4">
                 <h2 class="text-2xl font-bold">Halaman Register</h2>
         </div>
-        <form class="space-y-6 mt-6">
+        <form class="space-y-6 mt-6" action="{{ route('registerAction') }}" method="POST">
+            @csrf
             <div>
-                <input type="text" placeholder="Full Name" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <input name="username" type="text" placeholder="Full Name" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
             </div>
             <div>
-                <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <input name="email" type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
             </div>
             <div>
-                <input type="password" placeholder="Password" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
-            </div>
-            <div>
-                <input type="password" placeholder="Confirm Password" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <input name="password" type="password" placeholder="Password" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
             </div>
             <div>
                 <button type="submit" class="w-full py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white rounded-full font-bold">Register</button>
             </div>
         </form>
         <div class="text-center mt-6">
-            <p class="text-gray-600">Already a member? <a href="{{route('login')}}" class="text-blue-500">Login now</a></p>
+            <p class="text-gray-600">Sudah Punya Akun? <a href="{{route('login')}}" class="text-blue-500">Login sekarang</a></p>
             </div>
         </div>
     </section>

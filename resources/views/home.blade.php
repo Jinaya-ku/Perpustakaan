@@ -17,7 +17,7 @@
      <div class="flex space-x-4">
       <!-- Logo -->
       <div>
-       <a class="flex items-center py-5 px-2 text-gray-700" href="#">
+       <a class="flex items-center py-5 px-2 text-gray-700">
         <span class="font-bold text-xl">
          Perpustakaan
         </span>

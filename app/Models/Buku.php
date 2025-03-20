@@ -25,7 +25,7 @@ class Buku extends Model
     // Relasi one-to-many dengan Kategori
     public function kategori()
     {
-        return $this->belongsToMany(Kategori::class);
+        return $this->belongsTo(Kategori::class, 'kategori_id', 'id');
     }
 
     // Relasi one-to-many dengan Peminjaman
